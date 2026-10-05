@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View,TextInput } from 'react-native';
+// import {  } from 'react-native/types_generated/index';
 
 export default function App() {
+  const [text, setText] = useState('');
+  
   return (
     <View style={styles.container}>
-      <Text>Sai's first App</Text>
+      <Text style={{ borderWidth: 2, borderColor: '#000000', borderRadius: 10, padding: 20 }} onTouchStart={()=> alert(' touched!') }>Sai's first App</Text>
       <StatusBar style="auto" />
+      <TextInput onChangeText={(text)=>setText(text)} placeholder="Enter text here..." />
     </View>
   );
 }
@@ -17,5 +22,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     color: '#000000',
-  },
+    
+  }
 });
