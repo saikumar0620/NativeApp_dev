@@ -1,9 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Text, TextInput, View, } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 
 import { styles } from './styles.js';
-
 
 export default function App() {
   const [text, setText] = useState('');
